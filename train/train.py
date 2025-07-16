@@ -18,14 +18,14 @@ model_path = os.path.join(model_dir,"model.joblib")
 
 data = pd.read_csv(data_path)
 
-train,test = train_test_split(data,test_size=0.4,stratify=data['species'],random_state=42)
+train,test = train_test_split(data,test_size=0.3,stratify=data['species'],random_state=42)
 X_train = train[['sepal_length','sepal_width','petal_length','petal_width']]
 y_train = train.species
 X_test = test[['sepal_length','sepal_width','petal_length','petal_width']]
 y_test = test.species
 
 params = {
-  "max_depth":3,
+  "max_depth":4,
   "random_state":1
 }
 

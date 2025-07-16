@@ -25,5 +25,5 @@ def predict_species(data: IrisInput):
   input_df = pd.DataFrame([data.dict()])
   prediction = model.predict(input_df)[0]
   return {
-    "Predicted-species": prediction
+    "Predicted-Species": prediction
   }  
